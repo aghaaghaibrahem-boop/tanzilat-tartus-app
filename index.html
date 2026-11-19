@@ -86,5 +86,873 @@
       height: 48px;
       border-radius: 14px;
       border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: #f59e0b;
+      font-size: 1.3rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
 
-    
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .brand-bag-circle {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #ea580c, #d97706);
+      border: 2px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 6px 16px rgba(234, 88, 12, 0.28);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .brand-bag-circle svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: #ffffff;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .brand-title {
+      text-align: right;
+      line-height: 1.15;
+    }
+
+    .brand-title .line-1,
+    .brand-title .line-2 {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 14px 16px 36px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 14px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-input);
+      color: var(--text-main);
+      font-size: 0.98rem;
+      outline: none;
+    }
+
+    .categories-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      padding: 14px 2px 8px;
+      scrollbar-width: none;
+    }
+
+    .categories-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-pill {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-card);
+      color: var(--text-main);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+      touch-action: manipulation;
+    }
+
+    .cat-pill.active {
+      background: linear-gradient(135deg, #ea580c, #d97706);
+      color: #ffffff;
+      border-color: transparent;
+    }
+
+    .panel {
+      display: none;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 18px;
+      margin-top: 16px;
+      margin-bottom: 14px;
+    }
+
+    .panel.open {
+      display: block;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .checkbox-row {
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .checkbox-row input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--accent-orange);
+      cursor: pointer;
+    }
+
+    label {
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border-color);
+      background: var(--bg-input);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .btn {
+      border: none;
+      border-radius: 10px;
+      padding: 9px 14px;
+      font-weight: 700;
+      cursor: pointer;
+      font-size: 0.9rem;
+      touch-action: manipulation;
+    }
+
+    .btn-primary {
+      background: var(--accent-orange);
+      color: #ffffff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-danger {
+      background: var(--danger);
+      color: #ffffff;
+      padding: 6px 10px;
+      font-size: 0.8rem;
+    }
+
+    .upload-box {
+      border: 1.5px dashed var(--accent-orange);
+      background: var(--bg-input);
+      border-radius: 12px;
+      padding: 12px;
+    }
+
+    .upload-hint {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .preview-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      background: #000000;
+    }
+
+    .preview-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .remove-img-btn {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(220, 38, 38, 0.92);
+      color: #ffffff;
+      font-weight: 800;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .img-badge {
+      position: absolute;
+      bottom: 4px;
+      right: 4px;
+      background: rgba(0, 0, 0, 0.72);
+      color: #ffffff;
+      font-size: 0.7rem;
+      padding: 1px 6px;
+      border-radius: 6px;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 14px;
+      margin-top: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .product-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 18px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .media-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1.05;
+      background: var(--bg-input);
+      overflow: hidden;
+    }
+
+    .media-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .sale-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(153, 27, 27, 0.92);
+      color: #ffffff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 8px;
+      z-index: 2;
+    }
+
+    .photos-counter {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.72);
+      color: #ffffff;
+      font-size: 0.74rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 999px;
+      z-index: 2;
+    }
+
+    .gallery-nav {
+      position: absolute;
+      inset-inline: 6px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .gallery-nav button {
+      pointer-events: auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(0, 0, 0, 0.62);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .product-body {
+      padding: 10px 12px;
+    }
+
+    .store-tag {
+      font-size: 0.76rem;
+      color: var(--accent-orange);
+      font-weight: 700;
+    }
+
+    .product-title {
+      margin: 3px 0 4px;
+      font-size: 0.92rem;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .product-desc {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin: 0 0 8px;
+      white-space: pre-line;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .current-price {
+      font-weight: 800;
+      color: var(--accent-orange);
+      font-size: 0.9rem;
+    }
+
+    .old-price {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: line-through;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 6px;
+      padding: 0 12px 12px;
+      align-items: center;
+    }
+
+    .whatsapp-btn {
+      flex: 1;
+      text-align: center;
+      text-decoration: none;
+      background: var(--success);
+      color: #ffffff;
+      padding: 7px 8px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 54px 16px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="header-actions">
+        <button type="button" class="merchant-btn" id="toggleMerchantBtn" onclick="toggleMerchantPanel()">
+          🔒 بوابة<br />التجار
+        </button>
+        <button type="button" class="theme-btn" id="themeToggleBtn" onclick="toggleSiteTheme()" title="تبديل الوضع">🌙</button>
+      </div>
+
+      <div class="brand-lockup">
+        <span class="brand-bag-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 7h12l1 13H5L6 7z"></path>
+            <path d="M9 7V5a3 3 0 0 1 6 0v2"></path>
+          </svg>
+        </span>
+        <div class="brand-title">
+          <span class="line-1">تنزيلات</span>
+          <span class="line-2">طرطوس</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="panel" id="merchantPanel">
+      <h2 style="margin-top: 0;">إضافة عرض جديد</h2>
+
+      <form id="productForm" onsubmit="handlePublishProduct(event)">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="storeName">المحل</label>
+            <input type="text" id="storeName" placeholder="مثال: محلات جيفان / باليرينا" required />
+          </div>
+
+          <div class="form-group">
+            <label for="productTitle">اسم القطعة أو العرض</label>
+            <input type="text" id="productTitle" placeholder="مثال: جاكيت شتوي فاخر" required />
+          </div>
+
+          <div class="form-group">
+            <label for="categorySelect">القسم</label>
+            <select id="categorySelect">
+              <option value="ألبسة رجالية">ألبسة رجالية</option>
+              <option value="ألبسة نسائية">ألبسة نسائية</option>
+              <option value="ألبسة أطفال">ألبسة أطفال</option>
+              <option value="أحذية وحقائب">أحذية وحقائب</option>
+              <option value="إكسسوارات">إكسسوارات</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="whatsappPhone">رقم واتساب المحل (اختياري)</label>
+            <input type="text" id="whatsappPhone" placeholder="مثال: 9639XXXXXXXX" />
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="oldPrice">السعر القديم (اختياري)</label>
+            <input type="number" id="oldPrice" placeholder="اختياري" min="0" oninput="syncDiscountAuto()" />
+          </div>
+
+          <div class="form-group">
+            <label for="currentPrice">السعر الحالي (مطلوب)</label>
+            <input type="number" id="currentPrice" placeholder="مطلوب" min="0" required oninput="syncDiscountAuto()" />
+          </div>
+        </div>
+
+        <div class="form-group checkbox-row">
+          <input type="checkbox" id="isDiscounted" />
+          <label for="isDiscounted" style="margin: 0; cursor: pointer;">إضافة شارة "تخفيضات" على هذه القطعة</label>
+        </div>
+
+        <div class="form-group">
+          <label for="productImages">صور القطعة (عدد مفتوح — يمكنك الإضافة على دفعات)</label>
+          <div class="upload-box">
+            <input type="file" id="productImages" accept="image/*" multiple onchange="handleImagesChange(event)" />
+            <div class="upload-hint" id="imagesCountLabel">لم يتم اختيار صور بعد — يمكنك إضافة أي عدد من الصور.</div>
+            <div class="preview-grid" id="imagesPreview"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="productDetails">التفاصيل (العنوان / المقاسات)</label>
+          <textarea id="productDetails" rows="3" placeholder="متوفر مقاسات M/L..."></textarea>
+        </div>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button type="submit" class="btn btn-primary">نشر العرض في السوق</button>
+          <button type="button" class="btn btn-outline" onclick="clearDraftImages()">مسح الصور المختارة</button>
+        </div>
+      </form>
+    </section>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="ابحث عن قطعة، متجر، أو عرض ألبسة..." oninput="renderProducts()" />
+    </div>
+
+    <div class="categories-bar" id="categoriesBar">
+      <button type="button" class="cat-pill active" data-category="الكل" onclick="selectCategory(this, 'الكل')">الكل</button>
+      <button type="button" class="cat-pill" data-category="ألبسة رجالية" onclick="selectCategory(this, 'ألبسة رجالية')">👔 ألبسة رجالية</button>
+      <button type="button" class="cat-pill" data-category="ألبسة نسائية" onclick="selectCategory(this, 'ألبسة نسائية')">👗 ألبسة نسائية</button>
+      <button type="button" class="cat-pill" data-category="ألبسة أطفال" onclick="selectCategory(this, 'ألبسة أطفال')">🧒 ألبسة أطفال</button>
+      <button type="button" class="cat-pill" data-category="أحذية وحقائب" onclick="selectCategory(this, 'أحذية وحقائب')">👟 أحذية وحقائب</button>
+      <button type="button" class="cat-pill" data-category="إكسسوارات" onclick="selectCategory(this, 'إكسسوارات')">🕶️ إكسسوارات</button>
+    </div>
+
+    <div class="products-grid" id="productsGrid"></div>
+    <div class="empty-state" id="emptyState">لا توجد عروض ألبسة مضافة حالياً.</div>
+  </main>
+
+  <script>
+    var STORAGE_KEY = 'tanzilat_tartus_products_v2';
+    var THEME_KEY = 'tanzilat_tartus_theme_v1';
+
+    var products = [];
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) {
+        var parsed = JSON.parse(raw);
+        if (Array.isArray(parsed)) {
+          products = parsed;
+        }
+      }
+    } catch (e) {
+      products = [];
+    }
+
+    var draftImages = [];
+    var activeCategory = 'الكل';
+    var cardImageIndices = {};
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function applyTheme(isLight) {
+      if (isLight) {
+        document.body.classList.add('light-mode');
+      } else {
+        document.body.classList.remove('light-mode');
+      }
+      var btn = document.getElementById('themeToggleBtn');
+      if (btn) {
+        btn.textContent = isLight ? '🌙' : '☀️';
+      }
+    }
+
+    try {
+      applyTheme(localStorage.getItem(THEME_KEY) === 'light');
+    } catch (e) {
+      applyTheme(false);
+    }
+
+    function toggleSiteTheme() {
+      var isLight = !document.body.classList.contains('light-mode');
+      applyTheme(isLight);
+      try {
+        localStorage.setItem(THEME_KEY, isLight ? 'light' : 'dark');
+      } catch (e) {}
+    }
+
+    function toggleMerchantPanel() {
+      var panel = document.getElementById('merchantPanel');
+      if (panel) {
+        panel.classList.toggle('open');
+      }
+    }
+
+    function selectCategory(el, catName) {
+      activeCategory = catName;
+      var pills = document.querySelectorAll('.cat-pill');
+      for (var i = 0; i < pills.length; i++) {
+        pills[i].classList.remove('active');
+      }
+      if (el) {
+        el.classList.add('active');
+      }
+      renderProducts();
+    }
+
+    function syncDiscountAuto() {
+      var oldEl = document.getElementById('oldPrice');
+      var currEl = document.getElementById('currentPrice');
+      var chkEl = document.getElementById('isDiscounted');
+      if (!oldEl || !currEl || !chkEl) return;
+      var oldVal = parseFloat(oldEl.value);
+      var currVal = parseFloat(currEl.value);
+      if (!isNaN(oldVal) && !isNaN(currVal) && oldVal > currVal) {
+        chkEl.checked = true;
+      }
+    }
+
+    function compressImageFile(file, maxWidth, quality) {
+      maxWidth = maxWidth || 900;
+      quality = quality || 0.72;
+      return new Promise(function (resolve, reject) {
+        var reader = new FileReader();
+        reader.onload = function (ev) {
+          var img = new Image();
+          img.onload = function () {
+            var w = img.width || maxWidth;
+            var h = img.height || maxWidth;
+            var scale = Math.min(1, maxWidth / w);
+            var canvas = document.createElement('canvas');
+            canvas.width = Math.max(1, Math.round(w * scale));
+            canvas.height = Math.max(1, Math.round(h * scale));
+            var ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            resolve(canvas.toDataURL('image/jpeg', quality));
+          };
+          img.onerror = reject;
+          img.src = ev.target.result;
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    function handleImagesChange(e) {
+      var input = e && e.target ? e.target : document.getElementById('productImages');
+      var list = input && input.files ? Array.prototype.slice.call(input.files) : [];
+      var imgFiles = list.filter(function (f) {
+        return f && f.type && f.type.indexOf('image/') === 0;
+      });
+      if (!imgFiles.length) return;
+
+      var chain = Promise.resolve();
+      imgFiles.forEach(function (file) {
+        chain = chain.then(function () {
+          return compressImageFile(file, 900, 0.72)
+            .then(function (dataUrl) {
+              draftImages.push(dataUrl);
+            })
+            .catch(function () {});
+        });
+      });
+
+      chain.then(function () {
+        if (input) {
+          input.value = '';
+        }
+        renderDraftImages();
+      });
+    }
+
+    function removeDraftImage(index) {
+      draftImages.splice(index, 1);
+      renderDraftImages();
+    }
+        function clearDraftImages() {
+      draftImages = [];
+      renderDraftImages();
+    }
+
+    function renderDraftImages() {
+      var preview = document.getElementById('imagesPreview');
+      var label = document.getElementById('imagesCountLabel');
+      if (!preview) return;
+      preview.innerHTML = '';
+
+      if (label) {
+        label.textContent =
+          draftImages.length === 0
+            ? 'لم يتم اختيار صور بعد — يمكنك إضافة أي عدد من الصور.'
+            : 'عدد الصور المضافة لهذه القطعة: ' + draftImages.length;
+      }
+
+      for (var i = 0; i < draftImages.length; i++) {
+        var src = draftImages[i];
+        var item = document.createElement('div');
+        item.className = 'preview-item';
+        item.innerHTML =
+          '<img src="' + src + '" alt="صورة ' + (i + 1) + '" />' +
+          '<span class="img-badge">#' + (i + 1) + '</span>' +
+          '<button type="button" class="remove-img-btn" onclick="removeDraftImage(' + i + ')" title="حذف الصورة">×</button>';
+        preview.appendChild(item);
+      }
+    }
+
+    function saveProducts() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(products));
+        return true;
+      } catch (e) {
+        alert('مساحة التخزين ممتلئة بسبب كثرة الصور. احذف بعض العروض أو قلل عدد الصور.');
+        return false;
+      }
+    }
+
+    function handlePublishProduct(e) {
+      if (e && e.preventDefault) {
+        e.preventDefault();
+      }
+
+      if (draftImages.length === 0) {
+        alert('يرجى إضافة صورة واحدة على الأقل للقطعة.');
+        return;
+      }
+
+      var storeEl = document.getElementById('storeName');
+      var titleEl = document.getElementById('productTitle');
+      var catEl = document.getElementById('categorySelect');
+      var phoneEl = document.getElementById('whatsappPhone');
+      var oldEl = document.getElementById('oldPrice');
+      var currEl = document.getElementById('currentPrice');
+      var detailsEl = document.getElementById('productDetails');
+      var chkEl = document.getElementById('isDiscounted');
+
+      var oldVal = oldEl ? parseFloat(oldEl.value) : NaN;
+      var currVal = currEl ? parseFloat(currEl.value) : NaN;
+      var autoSale = !isNaN(oldVal) && !isNaN(currVal) && oldVal > currVal;
+      var manualSale = chkEl ? chkEl.checked : false;
+
+      var newProduct = {
+        id: Date.now().toString() + '_' + Math.random().toString(36).slice(2, 7),
+        storeName: storeEl ? storeEl.value.trim() : '',
+        title: titleEl ? titleEl.value.trim() : '',
+        category: catEl ? catEl.value : 'ألبسة رجالية',
+        phone: phoneEl ? phoneEl.value.trim().replace(/\D/g, '') : '',
+        oldPrice: oldEl ? oldEl.value.trim() : '',
+        currentPrice: currEl ? currEl.value.trim() : '',
+        details: detailsEl ? detailsEl.value.trim() : '',
+        isSale: Boolean(manualSale || autoSale),
+        images: draftImages.slice()
+      };
+
+      products.unshift(newProduct);
+      if (!saveProducts()) {
+        products.shift();
+        return;
+      }
+
+      draftImages = [];
+      renderDraftImages();
+      var formEl = document.getElementById('productForm');
+      if (formEl) {
+        formEl.reset();
+      }
+      if (chkEl) {
+        chkEl.checked = false;
+      }
+      renderProducts();
+      alert('تم نشر العرض بنجاح!');
+    }
+
+    function deleteProduct(id) {
+      products = products.filter(function (p) {
+        return p.id !== id;
+      });
+      saveProducts();
+      renderProducts();
+    }
+
+    function changeCardSlide(productId, delta, totalImages) {
+      var current = cardImageIndices[productId] || 0;
+      cardImageIndices[productId] = (current + delta + totalImages) % totalImages;
+      renderProducts();
+    }
+
+    function renderProducts() {
+      var grid = document.getElementById('productsGrid');
+      var empty = document.getElementById('emptyState');
+      var searchEl = document.getElementById('searchInput');
+      if (!grid) return;
+
+      var query = searchEl ? (searchEl.value || '').trim().toLowerCase() : '';
+
+      var filtered = products.filter(function (p) {
+        var matchesCat = activeCategory === 'الكل' || p.category === activeCategory;
+        var matchesText =
+          !query ||
+          (p.title && p.title.toLowerCase().indexOf(query) !== -1) ||
+          (p.storeName && p.storeName.toLowerCase().indexOf(query) !== -1) ||
+          (p.details && p.details.toLowerCase().indexOf(query) !== -1);
+        return matchesCat && matchesText;
+      });
+
+      grid.innerHTML = '';
+      if (empty) {
+        empty.style.display = filtered.length > 0 ? 'none' : 'block';
+      }
+
+      for (var i = 0; i < filtered.length; i++) {
+        var p = filtered[i];
+        var imgs = Array.isArray(p.images) && p.images.length ? p.images : p.image ? [p.image] : [];
+        var activeIdx = Math.min(cardImageIndices[p.id] || 0, Math.max(0, imgs.length - 1));
+        var activeSrc = imgs[activeIdx] || '';
+
+        var safeId = escapeHtml(p.id);
+        var safeStore = escapeHtml(p.storeName);
+        var safeCat = escapeHtml(p.category);
+        var safeTitle = escapeHtml(p.title);
+        var safeDetails = escapeHtml(p.details);
+        var safeCurrentPrice = escapeHtml(p.currentPrice);
+        var safeOldPrice = escapeHtml(p.oldPrice);
+
+        var waText = encodeURIComponent(
+          'مرحباً (' + p.storeName + ')، أود الاستفسار عن: ' + p.title + ' - السعر: ' + p.currentPrice
+        );
+        var waHref = p.phone
+          ? 'https://wa.me/' + p.phone + '?text=' + waText
+          : 'https://wa.me/?text=' + waText;
+
+        var card = document.createElement('article');
+        card.className = 'product-card';
+
+        var navHtml = '';
+        if (imgs.length > 1) {
+          navHtml =
+            '<div class="gallery-nav">' +
+              '<button type="button" onclick="changeCardSlide(\'' + safeId + '\', -1, ' + imgs.length + ')">›</button>' +
+              '<button type="button" onclick="changeCardSlide(\'' + safeId + '\', 1, ' + imgs.length + ')">‹</button>' +
+            '</div>' +
+            '<span class="photos-counter">' + (activeIdx + 1) + '/' + imgs.length + '</span>';
+        }
+
+        card.innerHTML =
+          '<div>' +
+            '<div class="media-box">' +
+              (p.isSale ? '<span class="sale-badge">تخفيضات</span>' : '') +
+              (activeSrc ? '<img src="' + activeSrc + '" alt="' + safeTitle + '" />' : '') +
+              navHtml +
+            '</div>' +
+            '<div class="product-body">' +
+              '<div class="store-tag">' + safeStore + ' • ' + safeCat + '</div>' +
+              '<h3 class="product-title">' + safeTitle + '</h3>' +
+              (safeDetails ? '<p class="product-desc">' + safeDetails + '</p>' : '') +
+              '<div class="price-row">' +
+                '<span class="current-price">السعر: ' + safeCurrentPrice + '</span>' +
+                (safeOldPrice ? '<span class="old-price">' + safeOldPrice + '</span>' : '') +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="card-actions">' +
+            '<a class="whatsapp-btn" href="' + waHref + '" target="_blank" rel="noopener">طلب واتساب</a>' +
+            '<button type="button" class="btn btn-danger" onclick="deleteProduct(\'' + safeId + '\')">حذف</button>' +
+          '</div>';
+
+        grid.appendChild(card);
+      }
+    }
+
+    renderProducts();
+  </script>
+</body>
+</html>
